@@ -25,10 +25,11 @@ AndroidDriver<AndroidElement> driver ;
 	public void login() throws InterruptedException {
 		
 		driver.findElement(MobileBy.id("android:id/text1")).click();
-		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"India\"))").click();
+	//	driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"India\"))").click();
 		driver.findElement(MobileBy.id("com.androidsample.generalstore:id/nameField")).sendKeys("Naruto Uzumaki");
 		driver.findElement(MobileBy.id("com.androidsample.generalstore:id/radioMale")).click();
 		driver.findElement(MobileBy.id("com.androidsample.generalstore:id/btnLetsShop")).click();
-			
+		driver.findElements(MobileBy.AndroidUIAutomator("UiSelector().text(\"ADD TO CART\")")).get(0).click();
+		driver.findElements(MobileBy.AndroidUIAutomator("UiSelector().text(\"ADD TO CART\")")).get(0).click();
 	}
 }

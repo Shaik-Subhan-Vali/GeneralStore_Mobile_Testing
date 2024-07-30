@@ -5,7 +5,7 @@
     <classes>
       <class name="Hybrid_app.generalStore">
         <methods>
-          <include name="preferencesettings"/>
+          <include name="login"/>
           <include name="setup"/>
         </methods>
       </class> <!-- Hybrid_app.generalStore -->
